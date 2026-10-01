@@ -28,7 +28,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <SEO
-        title="MasterTools – Free Online Calculators, Converters & Developer Utilities"
+        title="MasterTools  roopika tha mass da – Free Online Calculators, Converters & Developer Utilities"
         description="MasterTools provides free online calculators, converters, developer utilities, student tools, and productivity tools. Simple, fast, and 100% private."
         canonical="https://masterperi5.me/"
         schema={websiteSchema}
