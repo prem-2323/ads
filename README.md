@@ -255,3 +255,4 @@ When your Google AdSense account is approved:
   - Unix Timestamp Converter
 - [ ] **Web Analytics:** Integration of lightweight, privacy-respecting analytics (e.g. Cloudflare Web Analytics or Plausible).
 - [ ] **Legitimate Ad Monetization:** AdSense site review submission, `ads.txt` placement in `/public/ads.txt`, and placement yield testing.
+"# ads" 
