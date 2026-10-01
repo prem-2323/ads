@@ -1,0 +1,6 @@
+{
+  "name": "MasterTools",
+  "description": "MasterTools provides free online calculators, converters, developer utilities, student tools, and productivity tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
