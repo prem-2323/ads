@@ -43,11 +43,11 @@ export const Home: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.15]">
-            Free Online Tools
+            roopika tha mass su
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Simple, fast, and useful tools for students, developers, and everyday tasks. Instant answers right in your browser.
+            roopika tha mass su
           </p>
 
           {/* Prominent Search Bar */}
