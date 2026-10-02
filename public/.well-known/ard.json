@@ -1,5 +1,4 @@
 {
-  "$schema": "https://agenticresourcediscovery.org/schemas/v1/ai-catalog.json",
   "specVersion": "1.0",
   "host": {
     "displayName": "MasterTools",
@@ -8,7 +7,7 @@
   },
   "entries": [
     {
-      "identifier": "urn:air:masterperi5.me:tool:cgpa-calculator",
+      "identifier": "urn:ai:masterperi5.me:tool:cgpa-calculator",
       "displayName": "CGPA Calculator",
       "type": "text/html",
       "url": "https://masterperi5.me/tools/cgpa-calculator",
@@ -20,7 +19,7 @@
       ]
     },
     {
-      "identifier": "urn:air:masterperi5.me:tool:percentage-calculator",
+      "identifier": "urn:ai:masterperi5.me:tool:percentage-calculator",
       "displayName": "Percentage Calculator",
       "type": "text/html",
       "url": "https://masterperi5.me/tools/percentage-calculator",
@@ -32,7 +31,7 @@
       ]
     },
     {
-      "identifier": "urn:air:masterperi5.me:tool:attendance-calculator",
+      "identifier": "urn:ai:masterperi5.me:tool:attendance-calculator",
       "displayName": "Attendance Calculator",
       "type": "text/html",
       "url": "https://masterperi5.me/tools/attendance-calculator",
@@ -44,7 +43,7 @@
       ]
     },
     {
-      "identifier": "urn:air:masterperi5.me:tool:age-calculator",
+      "identifier": "urn:ai:masterperi5.me:tool:age-calculator",
       "displayName": "Age Calculator",
       "type": "text/html",
       "url": "https://masterperi5.me/tools/age-calculator",
@@ -56,7 +55,7 @@
       ]
     },
     {
-      "identifier": "urn:air:masterperi5.me:tool:json-formatter",
+      "identifier": "urn:ai:masterperi5.me:tool:json-formatter",
       "displayName": "JSON Formatter & Validator",
       "type": "text/html",
       "url": "https://masterperi5.me/tools/json-formatter",
@@ -68,7 +67,7 @@
       ]
     },
     {
-      "identifier": "urn:air:masterperi5.me:tool:word-counter",
+      "identifier": "urn:ai:masterperi5.me:tool:word-counter",
       "displayName": "Word & Character Counter",
       "type": "text/html",
       "url": "https://masterperi5.me/tools/word-counter",

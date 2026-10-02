@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Percent, RotateCcw, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { ToolLayout } from '../components/ToolLayout';
 import { getToolBySlug } from '../data/tools';
+import { trackToolComplete } from '../analytics/gtag';
 
 export const PercentageCalculator: React.FC = () => {
   const tool = getToolBySlug('percentage-calculator')!;
@@ -43,6 +44,7 @@ export const PercentageCalculator: React.FC = () => {
       fraction: `${obtained} / ${total}`,
       difference: total - obtained,
     });
+    trackToolComplete('Percentage Calculator', 'Student');
   };
 
   const handleReset = () => {

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { adsenseConfig, initAdSense } from '../config/adsense';
 
 export type AdSize = 'banner' | 'rectangle' | 'sidebar' | 'leaderboard';
 
@@ -8,32 +9,65 @@ interface AdSlotProps {
   slotId?: string;
 }
 
+declare global {
+  interface Window {
+    adsbygoogle?: any[];
+  }
+}
+
 /**
  * AdSlot Component
  * 
- * Production-ready placeholder for future Google AdSense or compliant display ads.
- * When real ads are ready to integrate:
- * 1. Replace the inner placeholder with the standard Google AdSense `<ins className="adsbygoogle" ...>` tag.
- * 2. Load the Google AdSense script in index.html.
- * 3. Call `(window.adsbygoogle = window.adsbygoogle || []).push({});` inside a useEffect hook.
+ * Supports State A (Placeholder Mode) and State B (Live AdSense Mode):
+ * - If VITE_ADSENSE_PUBLISHER_ID is missing or unconfigured, displays a clean reserved placeholder.
+ * - If VITE_ADSENSE_PUBLISHER_ID is valid, dynamically loads the Google AdSense script and initializes responsive ad units.
  */
 export const AdSlot: React.FC<AdSlotProps> = ({
   size = 'banner',
   className = '',
   slotId
 }) => {
-  // Dimension styles mapping to standard IAB ad dimensions
   const sizeStyles: Record<AdSize, string> = {
-    // 728x90 or responsive leaderboard banner
     banner: 'w-full min-h-[90px] max-w-[728px] my-6',
-    // 300x250 medium rectangle
     rectangle: 'w-full max-w-[336px] min-h-[280px] my-4',
-    // 300x600 or 160x600 skyscraper / sidebar unit
     sidebar: 'w-full min-h-[400px] my-4',
-    // Full width responsive unit
     leaderboard: 'w-full min-h-[100px] max-w-[970px] my-6',
   };
 
+  useEffect(() => {
+    if (adsenseConfig.isEnabled) {
+      initAdSense();
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        // Silently handle ad push initialization errors
+      }
+    }
+  }, [slotId]);
+
+  // State B: Live AdSense Mode
+  if (adsenseConfig.isEnabled && adsenseConfig.publisherId) {
+    return (
+      <div
+        className={`mx-auto overflow-hidden flex flex-col items-center justify-center transition-colors ${sizeStyles[size]} ${className}`}
+        aria-label="Advertisement"
+      >
+        <div className="text-[10px] uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">
+          Advertisement
+        </div>
+        <ins
+          className="adsbygoogle"
+          style={{ display: 'block' }}
+          data-ad-client={adsenseConfig.publisherId}
+          data-ad-slot={slotId || adsenseConfig.slots.home || ''}
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+      </div>
+    );
+  }
+
+  // State A: Unconfigured Placeholder Mode
   return (
     <div
       className={`mx-auto flex flex-col items-center justify-center transition-colors ${sizeStyles[size]} ${className}`}

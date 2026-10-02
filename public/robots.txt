@@ -2,5 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://masterperi5.me/sitemap.xml
-Agentmap: https://masterperi5.me/ai-catalog.json
-

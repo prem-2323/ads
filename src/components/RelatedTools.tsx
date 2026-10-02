@@ -4,6 +4,8 @@ import { ArrowRight, Wrench } from 'lucide-react';
 import { getToolsByIds, ToolItem } from '../data/tools';
 import { ToolIcon } from './ToolIcon';
 
+import { trackRelatedToolClick } from '../analytics/gtag';
+
 interface RelatedToolsProps {
   toolIds?: string[];
   tools?: ToolItem[];
@@ -59,6 +61,7 @@ export const RelatedTools: React.FC<RelatedToolsProps> = ({
 
             <Link
               to={tool.path}
+              onClick={() => trackRelatedToolClick(tool.name, 'article')}
               className="inline-flex items-center justify-between w-full pt-2.5 border-t border-slate-100 dark:border-slate-800/80 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
             >
               <span>Open Tool</span>

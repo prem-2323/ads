@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-route
 import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { useAnalytics } from './analytics/useAnalytics';
 
 // Core pages
@@ -69,61 +70,63 @@ export default function App() {
         <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
           <Navbar />
           <main className="flex-1">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                {/* Main Pages */}
-                <Route path="/" element={<Home />} />
-                <Route path="/tools" element={<ToolsPage />} />
-                <Route path="/categories/:categorySlug" element={<CategoryPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/:postSlug" element={<BlogPostPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-                <Route path="/terms" element={<TermsPage />} />
+            <ErrorBoundary>
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  {/* Main Pages */}
+                  <Route path="/" element={<Home />} />
+                  <Route path="/tools" element={<ToolsPage />} />
+                  <Route path="/categories/:categorySlug" element={<CategoryPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/blog/:postSlug" element={<BlogPostPage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
 
-                {/* 15 Working Tools */}
-                {/* 1. CGPA Calculator */}
-                <Route path="/tools/cgpa-calculator" element={<CgpaCalculator />} />
-                {/* 2. GPA Calculator */}
-                <Route path="/tools/gpa-calculator" element={<GpaCalculator />} />
-                {/* 3. Percentage Calculator */}
-                <Route path="/tools/percentage-calculator" element={<PercentageCalculator />} />
-                {/* 4. Attendance Calculator */}
-                <Route path="/tools/attendance-calculator" element={<AttendanceCalculator />} />
-                {/* 5. Marks Calculator */}
-                <Route path="/tools/marks-calculator" element={<MarksCalculator />} />
-                {/* 6. Age Calculator */}
-                <Route path="/tools/age-calculator" element={<AgeCalculator />} />
-                {/* 7. JSON Formatter */}
-                <Route path="/tools/json-formatter" element={<JsonFormatter />} />
-                {/* 8. JSON Validator */}
-                <Route path="/tools/json-validator" element={<JsonValidator />} />
-                {/* 9. Base64 Encoder / Decoder */}
-                <Route path="/tools/base64" element={<Base64Tool />} />
-                <Route path="/tools/base64-encoder-decoder" element={<Navigate to="/tools/base64" replace />} />
-                {/* 10. URL Encoder / Decoder */}
-                <Route path="/tools/url-encoder" element={<UrlEncoderTool />} />
-                <Route path="/tools/url-encoder-decoder" element={<Navigate to="/tools/url-encoder" replace />} />
-                {/* 11. UUID Generator */}
-                <Route path="/tools/uuid-generator" element={<UuidGenerator />} />
-                {/* 12. Word Counter */}
-                <Route path="/tools/word-counter" element={<WordCounter />} />
-                {/* 13. Unit Converter */}
-                <Route path="/tools/unit-converter" element={<UnitConverter />} />
-                {/* 14. Date Calculator */}
-                <Route path="/tools/date-calculator" element={<DateCalculator />} />
-                {/* 15. QR Code Generator */}
-                <Route path="/tools/qr-generator" element={<QrGenerator />} />
-                <Route path="/tools/qr-code-generator" element={<Navigate to="/tools/qr-generator" replace />} />
+                  {/* 15 Working Tools */}
+                  {/* 1. CGPA Calculator */}
+                  <Route path="/tools/cgpa-calculator" element={<CgpaCalculator />} />
+                  {/* 2. GPA Calculator */}
+                  <Route path="/tools/gpa-calculator" element={<GpaCalculator />} />
+                  {/* 3. Percentage Calculator */}
+                  <Route path="/tools/percentage-calculator" element={<PercentageCalculator />} />
+                  {/* 4. Attendance Calculator */}
+                  <Route path="/tools/attendance-calculator" element={<AttendanceCalculator />} />
+                  {/* 5. Marks Calculator */}
+                  <Route path="/tools/marks-calculator" element={<MarksCalculator />} />
+                  {/* 6. Age Calculator */}
+                  <Route path="/tools/age-calculator" element={<AgeCalculator />} />
+                  {/* 7. JSON Formatter */}
+                  <Route path="/tools/json-formatter" element={<JsonFormatter />} />
+                  {/* 8. JSON Validator */}
+                  <Route path="/tools/json-validator" element={<JsonValidator />} />
+                  {/* 9. Base64 Encoder / Decoder */}
+                  <Route path="/tools/base64" element={<Base64Tool />} />
+                  <Route path="/tools/base64-encoder-decoder" element={<Navigate to="/tools/base64" replace />} />
+                  {/* 10. URL Encoder / Decoder */}
+                  <Route path="/tools/url-encoder" element={<UrlEncoderTool />} />
+                  <Route path="/tools/url-encoder-decoder" element={<Navigate to="/tools/url-encoder" replace />} />
+                  {/* 11. UUID Generator */}
+                  <Route path="/tools/uuid-generator" element={<UuidGenerator />} />
+                  {/* 12. Word Counter */}
+                  <Route path="/tools/word-counter" element={<WordCounter />} />
+                  {/* 13. Unit Converter */}
+                  <Route path="/tools/unit-converter" element={<UnitConverter />} />
+                  {/* 14. Date Calculator */}
+                  <Route path="/tools/date-calculator" element={<DateCalculator />} />
+                  {/* 15. QR Code Generator */}
+                  <Route path="/tools/qr-generator" element={<QrGenerator />} />
+                  <Route path="/tools/qr-code-generator" element={<Navigate to="/tools/qr-generator" replace />} />
 
-                {/* Analytics Dashboard */}
-                <Route path="/admin/analytics" element={<AnalyticsPage />} />
+                  {/* Analytics Dashboard */}
+                  <Route path="/admin/analytics" element={<AnalyticsPage />} />
 
-                {/* 404 Fallback */}
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </Suspense>
+                  {/* 404 Fallback */}
+                  <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+              </Suspense>
+            </ErrorBoundary>
           </main>
           <Footer />
         </div>

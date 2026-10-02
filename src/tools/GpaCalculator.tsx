@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Plus, Trash2, RotateCcw, Calculator, Award, ArrowLeftRight } from 'lucide-react';
 import { ToolLayout } from '../components/ToolLayout';
 import { getToolBySlug } from '../data/tools';
+import { trackToolComplete } from '../analytics/gtag';
 
 type Scale = '4.0' | '5.0' | '10.0';
 
@@ -127,6 +128,7 @@ export const GpaCalculator: React.FC = () => {
       percentage: Math.min(100, (gpa / Number(scale)) * 100),
     });
     setError(null);
+    trackToolComplete('GPA Calculator', 'Student');
   };
 
   const handleReset = () => {

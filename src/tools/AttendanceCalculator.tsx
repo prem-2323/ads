@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CalendarCheck2, RotateCcw, AlertTriangle, CheckCircle2, Info } from 'lucide-react';
 import { ToolLayout } from '../components/ToolLayout';
 import { getToolBySlug } from '../data/tools';
+import { trackToolComplete } from '../analytics/gtag';
 
 export const AttendanceCalculator: React.FC = () => {
   const tool = getToolBySlug('attendance-calculator')!;
@@ -100,6 +101,7 @@ export const AttendanceCalculator: React.FC = () => {
         classesCanMiss: 0,
       });
     }
+    trackToolComplete('Attendance Calculator', 'Student');
   };
 
   const handleReset = () => {
