@@ -19,7 +19,7 @@ export interface AdSenseConfig {
   };
 }
 
-const rawPublisherId = import.meta.env.VITE_ADSENSE_PUBLISHER_ID;
+const rawPublisherId = import.meta.env.VITE_ADSENSE_PUBLISHER_ID || 'ca-pub-1212120633352258';
 
 const isValidPublisherId = (id: string | undefined): boolean => {
   if (!id) return false;
