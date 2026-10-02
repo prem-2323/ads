@@ -48,9 +48,11 @@ function PageLoader() {
   );
 }
 
-// Scroll to top helper on route change
-function ScrollToTop() {
+// Scroll to top & analytics helper on route change (must be inside BrowserRouter)
+function RouterAppSetup() {
   const { pathname } = useLocation();
+
+  useAnalytics();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
@@ -60,12 +62,10 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  useAnalytics();
-
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <ScrollToTop />
+        <RouterAppSetup />
         <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
           <Navbar />
           <main className="flex-1">
