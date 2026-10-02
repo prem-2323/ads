@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowRight, BookOpen, Calendar, Clock, Calculator, User, RefreshCw } from 'lucide-react';
 import { getBlogPostBySlug, getRelatedArticles } from '../data/blogPosts';
+import { trackArticleView } from '../analytics/gtag';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { AdSlot } from '../components/AdSlot';
 import { SEO } from '../components/SEO';
@@ -12,6 +13,12 @@ import { RelatedArticles } from '../components/RelatedArticles';
 export const BlogPostPage: React.FC = () => {
   const { postSlug } = useParams<{ postSlug: string }>();
   const post = getBlogPostBySlug(postSlug || '');
+
+  useEffect(() => {
+    if (post) {
+      trackArticleView(post.slug, post.category);
+    }
+  }, [post]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;

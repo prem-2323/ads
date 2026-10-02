@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Clock, Calendar, Search, Filter, Sparkles, Wrench, Layers } from 'lucide-react';
 import { BLOG_POSTS, BlogPost } from '../data/blogPosts';
+import { trackSiteSearch } from '../analytics/gtag';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { AdSlot } from '../components/AdSlot';
 import { SEO } from '../components/SEO';

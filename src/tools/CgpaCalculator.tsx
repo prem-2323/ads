@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Plus, Trash2, RotateCcw, Calculator, Award } from 'lucide-react';
 import { ToolLayout } from '../components/ToolLayout';
 import { getToolBySlug } from '../data/tools';
+import { trackToolComplete } from '../analytics/gtag';
 
 interface SubjectRow {
   id: string;
@@ -91,6 +92,7 @@ export const CgpaCalculator: React.FC = () => {
       totalPoints
     });
     setError(null);
+    trackToolComplete('CGPA Calculator', 'Student');
   };
 
   const handleReset = () => {

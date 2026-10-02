@@ -68,7 +68,10 @@ export const PrivacyPolicyPage: React.FC = () => {
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-slate-900 dark:text-white">5. Web Analytics &amp; Metrics</h2>
             <p>
-              Currently, third-party analytics trackers (such as Google Analytics) are not active. If privacy-preserving analytics are integrated in the future, this policy will be updated to describe the exact metrics collected and provide opt-out instructions.
+              MasterTools uses Google Analytics 4 (GA4) to understand platform usage, traffic sources, page views, device types, and popular tool categories.
+            </p>
+            <p>
+              Our analytics implementation is strictly privacy-focused. We do NOT collect or store personal identifiers, names, email addresses, phone numbers, or user-entered calculation inputs (such as marks, grades, dates of birth, or JSON payload content). All analytics data is aggregated to improve website performance and user experience.
             </p>
           </section>
 

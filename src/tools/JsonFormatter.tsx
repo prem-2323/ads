@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Code, Copy, Check, Trash2, Minimize2, Maximize2, ShieldCheck, AlertCircle, FileCode } from 'lucide-react';
 import { ToolLayout } from '../components/ToolLayout';
 import { getToolBySlug } from '../data/tools';
+import { trackCopyResult, trackToolComplete } from '../analytics/gtag';
 
 const SAMPLE_JSON = `{
   "name": "MasterTools",
@@ -42,6 +43,7 @@ export const JsonFormatter: React.FC = () => {
       const formatted = JSON.stringify(parsed, null, indentSize);
       setOutputJson(formatted);
       setStatusMessage({ type: 'success', text: 'Valid JSON formatted successfully.' });
+      trackToolComplete('JSON Formatter', 'Developer');
     } catch (err: unknown) {
       const errorMsg = err instanceof Error ? err.message : 'Invalid JSON format';
       setStatusMessage({

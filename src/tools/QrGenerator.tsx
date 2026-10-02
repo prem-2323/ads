@@ -3,6 +3,7 @@ import { QrCode, Download, Trash2, Copy, Check, Sparkles, AlertCircle } from 'lu
 import qrcode from 'qrcode-generator';
 import { ToolLayout } from '../components/ToolLayout';
 import { getToolBySlug } from '../data/tools';
+import { trackDownload, trackCopyResult, trackToolComplete, trackToolUse } from '../analytics/gtag';
 
 type ErrorCorrectionLevel = 'L' | 'M' | 'Q' | 'H';
 
@@ -29,6 +30,7 @@ export const QrGenerator: React.FC = () => {
       qr.make();
       const generatedUrl = qr.createDataURL(size, 4);
       setDataUrl(generatedUrl);
+      trackToolComplete('QR Code Generator', 'Utility');
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : 'Text payload is too large for standard QR matrix';
       setError(`QR Code generation failed: ${msg}. Try shortening the text or choosing a lower error-correction level.`);
@@ -42,6 +44,7 @@ export const QrGenerator: React.FC = () => {
 
   const handleDownload = () => {
     if (!dataUrl) return;
+    trackDownload('qr_code_png', 'QR Code Generator');
     const link = document.createElement('a');
     link.href = dataUrl;
     link.download = `mastertools-qr-${Date.now()}.png`;
@@ -54,6 +57,7 @@ export const QrGenerator: React.FC = () => {
     if (!inputText) return;
     try {
       await navigator.clipboard.writeText(inputText);
+      trackCopyResult('QR Code Generator');
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {

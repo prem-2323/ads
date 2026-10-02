@@ -1,0 +1,83 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/schemas/v1/ai-catalog.json",
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "MasterTools",
+    "url": "https://masterperi5.me",
+    "description": "Free, fast, and privacy-first web utility suite providing calculators, academic converters, developer tools, and productivity utilities."
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:masterperi5.me:tool:cgpa-calculator",
+      "displayName": "CGPA Calculator",
+      "type": "text/html",
+      "url": "https://masterperi5.me/tools/cgpa-calculator",
+      "description": "Calculate cumulative grade point average (CGPA) based on course credits and grade points across semesters.",
+      "representativeQueries": [
+        "calculate my CGPA online",
+        "compute cumulative grade point average from credits",
+        "CGPA calculator for college and university grades"
+      ]
+    },
+    {
+      "identifier": "urn:air:masterperi5.me:tool:percentage-calculator",
+      "displayName": "Percentage Calculator",
+      "type": "text/html",
+      "url": "https://masterperi5.me/tools/percentage-calculator",
+      "description": "Calculate exam percentage, mark ratio, and percentage increase or decrease.",
+      "representativeQueries": [
+        "calculate percentage from marks",
+        "exam percentage calculator",
+        "find percentage score of total marks"
+      ]
+    },
+    {
+      "identifier": "urn:air:masterperi5.me:tool:attendance-calculator",
+      "displayName": "Attendance Calculator",
+      "type": "text/html",
+      "url": "https://masterperi5.me/tools/attendance-calculator",
+      "description": "Track lecture attendance and calculate classes required or safe to skip to hit target cutoff.",
+      "representativeQueries": [
+        "how many classes can I miss for 75 percent attendance",
+        "attendance calculator for college cutoffs",
+        "calculate minimum lectures needed for 80 percent attendance"
+      ]
+    },
+    {
+      "identifier": "urn:air:masterperi5.me:tool:age-calculator",
+      "displayName": "Age Calculator",
+      "type": "text/html",
+      "url": "https://masterperi5.me/tools/age-calculator",
+      "description": "Calculate exact chronological age in years, months, days, total days lived, and countdown to next birthday.",
+      "representativeQueries": [
+        "calculate my exact age from date of birth",
+        "how old am I in days and months",
+        "chronological age breakdown and birthday countdown"
+      ]
+    },
+    {
+      "identifier": "urn:air:masterperi5.me:tool:json-formatter",
+      "displayName": "JSON Formatter & Validator",
+      "type": "text/html",
+      "url": "https://masterperi5.me/tools/json-formatter",
+      "description": "Client-side JSON beautifier, minifier, validator, and instant syntax error diagnostics tool.",
+      "representativeQueries": [
+        "format and validate json string online",
+        "beautify raw json payload",
+        "minify json and check for syntax errors"
+      ]
+    },
+    {
+      "identifier": "urn:air:masterperi5.me:tool:word-counter",
+      "displayName": "Word & Character Counter",
+      "type": "text/html",
+      "url": "https://masterperi5.me/tools/word-counter",
+      "description": "Real-time word, character, sentence, paragraph, and reading time counter.",
+      "representativeQueries": [
+        "count words and characters in text",
+        "estimate reading time for essay",
+        "word counter without spaces"
+      ]
+    }
+  ]
+}

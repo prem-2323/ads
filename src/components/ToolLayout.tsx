@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ToolItem, getRelatedTools } from '../data/tools';
 import { getBlogPostsForTool } from '../data/blogPosts';
+import { trackToolOpen } from '../analytics/gtag';
 import { Breadcrumb } from './Breadcrumb';
 import { FAQ } from './FAQ';
 import { AdSlot } from './AdSlot';
@@ -20,6 +21,10 @@ export const ToolLayout: React.FC<ToolLayoutProps> = ({ tool, children }) => {
   const relatedTools = getRelatedTools(tool);
   // Get related blog posts for this specific tool
   const relatedPosts = getBlogPostsForTool(tool.id, 3);
+
+  useEffect(() => {
+    trackToolOpen(tool.name, tool.category);
+  }, [tool.id, tool.name, tool.category]);
 
   // Schema.org Structured Data for WebApplication
   const webAppSchema = {

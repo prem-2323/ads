@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowRight, Layers, Sparkles } from 'lucide-react';
 import { CATEGORIES, getToolsByCategory, CategoryItem } from '../data/tools';
+import { trackCategoryView } from '../analytics/gtag';
 import { ToolCard } from '../components/ToolCard';
 import { ToolIcon } from '../components/ToolIcon';
 import { Breadcrumb } from '../components/Breadcrumb';
@@ -15,6 +16,12 @@ export const CategoryPage: React.FC = () => {
   const currentCategory = CATEGORIES.find(
     c => c.slug.toLowerCase() === (categorySlug || '').toLowerCase()
   );
+
+  useEffect(() => {
+    if (currentCategory) {
+      trackCategoryView(currentCategory.name);
+    }
+  }, [currentCategory]);
 
   if (!currentCategory || currentCategory.id === 'All') {
     // If not found, redirect to /tools
