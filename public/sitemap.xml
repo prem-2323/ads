@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Platform Pages -->
   <url>
     <loc>https://masterperi5.me/</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://masterperi5.me/tools</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://masterperi5.me/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 15 Tools -->
+  <url>
     <loc>https://masterperi5.me/tools/cgpa-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/tools/gpa-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -26,6 +39,11 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://masterperi5.me/tools/marks-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://masterperi5.me/tools/age-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -36,15 +54,116 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://masterperi5.me/tools/json-validator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/tools/base64</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/tools/url-encoder</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/tools/uuid-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://masterperi5.me/tools/word-counter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://masterperi5.me/blog</loc>
+    <loc>https://masterperi5.me/tools/unit-converter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/tools/date-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/tools/qr-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Category Pages -->
+  <url>
+    <loc>https://masterperi5.me/categories/student</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/categories/developer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/categories/calculator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/categories/productivity</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/categories/utility</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-calculate-cgpa</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-calculate-attendance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/cgpa-vs-gpa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-calculate-percentage</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/what-is-json</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-format-json</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/useful-tools-for-college-students</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-convert-units</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Company & Legal Pages -->
   <url>
     <loc>https://masterperi5.me/about</loc>
     <changefreq>monthly</changefreq>

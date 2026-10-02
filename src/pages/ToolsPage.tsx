@@ -43,7 +43,8 @@ export const ToolsPage: React.FC = () => {
     return TOOLS.filter(tool => {
       const matchesCategory =
         selectedCategory === 'All' ||
-        tool.category.toLowerCase() === selectedCategory.toLowerCase();
+        tool.category.toLowerCase() === selectedCategory.toLowerCase() ||
+        (tool.categories && tool.categories.some(c => c.toLowerCase() === selectedCategory.toLowerCase()));
 
       const q = searchQuery.toLowerCase().trim();
       const matchesSearch =

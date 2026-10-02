@@ -23,6 +23,8 @@ import {
   QrCode,
   Ruler,
   KeyRound,
+  Zap,
+  Wrench,
   LucideProps
 } from 'lucide-react';
 import { ToolIconName, CategoryIconName } from '../data/tools';
@@ -50,6 +52,10 @@ export const ToolIcon: React.FC<ToolIconProps> = ({ name, ...props }) => {
       return <CheckSquare {...props} />;
     case 'ArrowLeftRight':
       return <ArrowLeftRight {...props} />;
+    case 'Zap':
+      return <Zap {...props} />;
+    case 'Wrench':
+      return <Wrench {...props} />;
 
     // Tool icons
     case 'Percent':

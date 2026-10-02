@@ -68,7 +68,7 @@ export const PrivacyPolicyPage: React.FC = () => {
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-slate-900 dark:text-white">5. Web Analytics &amp; Metrics</h2>
             <p>
-              In our current Phase 1 release, third-party analytics trackers (such as Google Analytics) are not active. If privacy-preserving analytics are integrated in future phases, this policy will be updated to describe the exact metrics collected and provide opt-out instructions.
+              Currently, third-party analytics trackers (such as Google Analytics) are not active. If privacy-preserving analytics are integrated in the future, this policy will be updated to describe the exact metrics collected and provide opt-out instructions.
             </p>
           </section>
 
@@ -78,7 +78,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               MasterTools is intended to eventually monetize through legitimate display advertising partners, such as <strong>Google AdSense</strong>.
             </p>
             <p>
-              In Phase 1, live advertising scripts are not yet connected; placeholder units are reserved in non-intrusive page locations. Once integrated, Google and other third-party vendors may use cookies (including the DoubleClick cookie) to serve ads based on prior visits to this website or other websites on the Internet.
+              Currently, live advertising scripts are not connected; placeholder units are reserved in non-intrusive page locations. Once integrated, Google and other third-party vendors may use cookies (including the DoubleClick cookie) to serve ads based on prior visits to this website or other websites on the Internet.
             </p>
             <p>
               Users will be able to opt out of personalized advertising by visiting Google&rsquo;s Ads Settings (<a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">https://adssettings.google.com</a>) or through the Network Advertising Initiative opt-out page (<a href="https://optout.networkadvertising.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">https://optout.networkadvertising.org</a>).

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ToolItem, TOOLS } from '../data/tools';
+import { ToolItem, getRelatedTools } from '../data/tools';
 import { Breadcrumb } from './Breadcrumb';
 import { FAQ } from './FAQ';
 import { AdSlot } from './AdSlot';
@@ -14,8 +14,8 @@ interface ToolLayoutProps {
 }
 
 export const ToolLayout: React.FC<ToolLayoutProps> = ({ tool, children }) => {
-  // Get other related tools
-  const relatedTools = TOOLS.filter(t => t.id !== tool.id).slice(0, 4);
+  // Get curated related tools for this specific tool
+  const relatedTools = getRelatedTools(tool);
 
   // Schema.org Structured Data for WebApplication
   const webAppSchema = {

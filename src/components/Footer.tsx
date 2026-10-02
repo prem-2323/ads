@@ -7,22 +7,22 @@ export const Footer: React.FC = () => {
   return (
     <footer className="border-t border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors mt-auto">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand Info */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="sm:col-span-2 space-y-4">
             <Link to="/" className="inline-flex items-center gap-2">
               <BrandLogo className="h-7 w-7" size={28} />
               <span className="text-base font-black tracking-tight text-slate-900 dark:text-white uppercase">
                 Master<span className="text-blue-600 dark:text-blue-400">Tools</span>
               </span>
             </Link>
-            <p className="text-sm font-medium text-slate-600 dark:text-slate-300">
+            <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
               Free Tools. Simple. Fast. Useful.
             </p>
             <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
               MasterTools provides free online calculators, converters, developer utilities, student tools, and productivity utilities. Designed for speed, privacy, and zero bloat.
             </p>
-            <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400 pt-1">
+            <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 dark:text-slate-400 pt-1">
               <div className="flex items-center gap-1.5">
                 <Lock className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
                 <span>100% Client-Side Privacy</span>
@@ -34,15 +34,20 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Popular Tools */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
-              Explore Tools
+              Popular Tools
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
                 <Link to="/tools/cgpa-calculator" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
                   CGPA Calculator
+                </Link>
+              </li>
+              <li>
+                <Link to="/tools/gpa-calculator" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
+                  GPA Calculator
                 </Link>
               </li>
               <li>
@@ -53,11 +58,6 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/tools/attendance-calculator" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
                   Attendance Calculator
-                </Link>
-              </li>
-              <li>
-                <Link to="/tools/age-calculator" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
-                  Age Calculator
                 </Link>
               </li>
               <li>
@@ -73,20 +73,54 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Categories */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
+              Categories
+            </h4>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <Link to="/categories/student" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
+                  Student Tools
+                </Link>
+              </li>
+              <li>
+                <Link to="/categories/developer" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
+                  Developer Tools
+                </Link>
+              </li>
+              <li>
+                <Link to="/categories/calculator" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
+                  Calculators
+                </Link>
+              </li>
+              <li>
+                <Link to="/categories/productivity" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
+                  Productivity
+                </Link>
+              </li>
+              <li>
+                <Link to="/categories/utility" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
+                  Utility
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Platform & Legal */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
-              Company & Legal
+              Company &amp; Legal
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
                 <Link to="/tools" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
-                  All Tools
+                  All Tools Directory
                 </Link>
               </li>
               <li>
                 <Link to="/blog" className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
-                  Blog & Guides
+                  Blog &amp; Guides
                 </Link>
               </li>
               <li>
@@ -115,10 +149,10 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
-          <p>© 2026 MasterTools (masterperi5.me). All rights reserved.</p>
+          <p>© 2026 MasterTools. All rights reserved.</p>
           <div className="flex items-center gap-1 text-slate-400 dark:text-slate-500 text-[11px]">
             <Sparkles className="h-3 w-3 text-amber-500" />
-            <span>Built for speed, utility & accuracy.</span>
+            <span>Built for speed, utility &amp; accuracy.</span>
           </div>
         </div>
       </div>
