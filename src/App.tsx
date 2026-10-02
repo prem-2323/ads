@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-route
 import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { useAnalytics } from './analytics/useAnalytics';
 
 // Core pages
 import { Home } from './pages/Home';
@@ -17,6 +18,7 @@ const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ defaul
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage').then(m => ({ default: m.PrivacyPolicyPage })));
 const TermsPage = lazy(() => import('./pages/TermsPage').then(m => ({ default: m.TermsPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
+const AnalyticsPage = lazy(() => import('./pages/AnalyticsPage').then(m => ({ default: m.AnalyticsPage })));
 
 // Lazy-loaded 15 tools
 const CgpaCalculator = lazy(() => import('./tools/CgpaCalculator').then(m => ({ default: m.CgpaCalculator })));
@@ -58,6 +60,8 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  useAnalytics();
+
   return (
     <ThemeProvider>
       <BrowserRouter>
@@ -112,6 +116,9 @@ export default function App() {
                 {/* 15. QR Code Generator */}
                 <Route path="/tools/qr-generator" element={<QrGenerator />} />
                 <Route path="/tools/qr-code-generator" element={<Navigate to="/tools/qr-generator" replace />} />
+
+                {/* Analytics Dashboard */}
+                <Route path="/admin/analytics" element={<AnalyticsPage />} />
 
                 {/* 404 Fallback */}
                 <Route path="*" element={<NotFoundPage />} />
