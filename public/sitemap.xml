@@ -121,7 +121,7 @@
     <priority>0.75</priority>
   </url>
 
-  <!-- Blog Articles -->
+  <!-- Blog Articles (48 Total) -->
   <url>
     <loc>https://masterperi5.me/blog/how-to-calculate-cgpa</loc>
     <changefreq>monthly</changefreq>
@@ -159,6 +159,218 @@
   </url>
   <url>
     <loc>https://masterperi5.me/blog/how-to-convert-units</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic Cluster 1: CGPA / GPA -->
+  <url>
+    <loc>https://masterperi5.me/blog/cgpa-to-percentage</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/percentage-to-cgpa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/what-is-cgpa-and-how-calculated</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/cgpa-calculation-example-college-students</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/sgpa-vs-cgpa-difference</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-calculate-gpa-from-marks</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-improve-cgpa-grade-planning</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic Cluster 2: Attendance -->
+  <url>
+    <loc>https://masterperi5.me/blog/how-many-classes-can-i-miss-75-attendance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-many-classes-to-attend-for-75-percent</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/attendance-percentage-changes-after-missing-class</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/attendance-calculator-practical-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic Cluster 3: Marks / Percentage -->
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-calculate-exam-percentage</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/marks-to-percentage-conversion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/percentage-to-marks-conversion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-calculate-average-marks</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-calculate-total-marks-and-percentage</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/percentage-vs-percentile-explained</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic Cluster 4: Developer Tools -->
+  <url>
+    <loc>https://masterperi5.me/blog/json-syntax-explained-for-beginners</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/json-object-vs-json-array</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/common-json-formatting-errors</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-validate-json</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/json-pretty-print-vs-minified</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/base64-encoding-explained</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/url-encoding-explained</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/what-is-a-uuid</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/uuid-versions-explained</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-generate-uuid</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/word-count-vs-character-count</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic Cluster 5: Calculators & Daily Utilities -->
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-calculate-age-from-date-of-birth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-date-difference-is-calculated</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/common-unit-conversions-explained</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/metric-vs-imperial-units</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-qr-codes-work</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/what-information-can-a-qr-code-store</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-create-a-qr-code</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic Cluster 6: Student Productivity -->
+  <url>
+    <loc>https://masterperi5.me/blog/digital-tools-every-student-should-know</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-to-organize-academic-calculations</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/simple-ways-to-track-academic-progress</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/common-calculation-mistakes-students-make</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masterperi5.me/blog/how-online-calculators-help-study-planning</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

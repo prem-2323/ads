@@ -676,3 +676,11 @@ export function getToolsByCategory(categorySlug: string): ToolItem[] {
     t.categories.some(c => c.toLowerCase() === norm)
   );
 }
+
+export function getToolsByIds(ids: string[]): ToolItem[] {
+  if (!ids || ids.length === 0) return [];
+  return ids
+    .map(id => getToolBySlug(id))
+    .filter((t): t is ToolItem => t !== undefined);
+}
+

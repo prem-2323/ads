@@ -4,7 +4,7 @@ interface SEOProps {
   title: string;
   description: string;
   canonical?: string;
-  schema?: Record<string, unknown>;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 export const SEO: React.FC<SEOProps> = ({

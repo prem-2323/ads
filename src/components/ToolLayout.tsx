@@ -1,10 +1,12 @@
 import React from 'react';
 import { ToolItem, getRelatedTools } from '../data/tools';
+import { getBlogPostsForTool } from '../data/blogPosts';
 import { Breadcrumb } from './Breadcrumb';
 import { FAQ } from './FAQ';
 import { AdSlot } from './AdSlot';
 import { SEO } from './SEO';
 import { ToolIcon } from './ToolIcon';
+import { RelatedArticles } from './RelatedArticles';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, BookOpen, HelpCircle, Calculator } from 'lucide-react';
 
@@ -16,6 +18,8 @@ interface ToolLayoutProps {
 export const ToolLayout: React.FC<ToolLayoutProps> = ({ tool, children }) => {
   // Get curated related tools for this specific tool
   const relatedTools = getRelatedTools(tool);
+  // Get related blog posts for this specific tool
+  const relatedPosts = getBlogPostsForTool(tool.id, 3);
 
   // Schema.org Structured Data for WebApplication
   const webAppSchema = {
@@ -139,6 +143,15 @@ export const ToolLayout: React.FC<ToolLayoutProps> = ({ tool, children }) => {
 
             {/* Frequently Asked Questions */}
             <FAQ faqs={tool.faqs} title={`Frequently Asked Questions about ${tool.name}`} />
+
+            {/* Related Educational Articles */}
+            {relatedPosts.length > 0 && (
+              <RelatedArticles
+                articles={relatedPosts}
+                title={`Educational Guides & Articles for ${tool.name}`}
+                subtitle="Learn more about formulas, grading scales, data structures, and practical steps."
+              />
+            )}
           </div>
 
           {/* Desktop Sidebar */}
@@ -205,3 +218,4 @@ export const ToolLayout: React.FC<ToolLayoutProps> = ({ tool, children }) => {
     </>
   );
 };
+
